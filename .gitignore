@@ -1,0 +1,66 @@
+# ==========================================
+# 1. CRITICAL SECRETS & KEYS (NEVER COMMIT)
+# ==========================================
+.env
+.env.testnet
+.env.mainnet
+.env.local
+.env*
+!.env.example
+
+# SSH & Private Key Files
+*.pem
+*.key
+*.id_rsa
+
+# ==========================================
+# 2. RUST / CARGO ARTIFACTS
+# ==========================================
+/target/
+**/*.rs.bk
+Cargo.lock.3
+
+# ==========================================
+# 3. SOLIDITY / FOUNDRY / HARDHAT ARTIFACTS
+# ==========================================
+/out/
+/cache/
+/artifacts/
+/typechain/
+/typechain-types/
+/broadcast/
+
+# ==========================================
+# 4. LOGS & RUNTIME DATA
+# ==========================================
+*.log
+*.sqlite
+*.db
+
+# ==========================================
+# 5. IDE & EDITOR SETTINGS
+# ==========================================
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ==========================================
+# 6. SYSTEM FILES
+# ==========================================
+.DS_Store
+Thumbs.db
+
+# ==========================================
+# 3. SOLIDITY / FOUNDRY / HARDHAT ARTIFACTS
+# ==========================================
+/out/
+/cache/
+/artifacts/
+/typechain/
+/typechain-types/
+/broadcast/
+
+# Foundry Dependencies & Remappings local cache
+/lib/
+!lib/.gitkeep
