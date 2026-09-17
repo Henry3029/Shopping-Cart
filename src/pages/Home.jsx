@@ -1,5 +1,9 @@
 import React from 'react';
 
+import bigviewImage from '../assets/bigview-image.jpeg';
+import birthdayImage from '../assets/birthday-image.jpg';
+import movieImage from '../assets/movie-image.jpg';
+
 function Home({ onNavigateToShop }) {
   return (
     <div className="home-page">
@@ -11,6 +15,12 @@ function Home({ onNavigateToShop }) {
           Shop Now
         </button>
       </section>
+      {/*images gallary section*/}
+      <div classeName="images-gallary">
+        <img src={bigviewImage} alt={logo image}/>
+        <img src={birthdayImage} alt={birthday image}/>
+        <img src={movieImage} alt={the next movie to watch image}/>
+      </div>
 
       {/* Highlights / Features Section */}
       <section className="features-grid">
