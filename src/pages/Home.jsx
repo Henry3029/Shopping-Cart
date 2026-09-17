@@ -1,7 +1,7 @@
 import React from 'react';
 import './Home.css';
 
-import bigviewImage from '../assets/bigview-image.jpeg';
+import bigviewImage from '../assets/bigview-image.jpg';
 import birthdayImage from '../assets/birthday-image.jpg';
 import movieImage from '../assets/movie-image.jpg';
 
