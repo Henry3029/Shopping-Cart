@@ -18,9 +18,9 @@ function Home({ onNavigateToShop }) {
       </section>
       {/*images gallary section*/}
       <div classeName="images-gallary">
-        <img src={bigviewImage} alt={logo image}/>
-        <img src={birthdayImage} alt={birthday image}/>
-        <img src={movieImage} alt={the next movie to watch image}/>
+        <img src={bigviewImage} alt={"logo image"}/>
+        <img src={birthdayImage} alt={"birthday image"}/>
+        <img src={movieImage} alt={"the Next movie to watch"}/>
       </div>
 
       {/* Highlights / Features Section */}
