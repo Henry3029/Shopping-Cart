@@ -1,4 +1,5 @@
 import React from 'react';
+import './Home.css';
 
 import bigviewImage from '../assets/bigview-image.jpeg';
 import birthdayImage from '../assets/birthday-image.jpg';
