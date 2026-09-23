@@ -28,26 +28,37 @@
   max-width: 600px;
 }
 
-.images-gallary {
+/* 1. Grid container holds all rows & columns */
+.image-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
   gap: 1.5rem;
-  width: 100%;    
+  width: 100%;
   max-width: 1200px;
   padding: 1rem;
   margin: 0 auto;
 }
 
-
-.images-gallary img {
+/* 2. Card wrapper creates identical 250px boxes */
+.image-card {
   width: 100%;
   height: 250px;
-  object-fit: contain; /* Prevents image distortion */
-  object-position: center;
-  transition: transform 0.2s ease-in-out;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #e2e8f0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
-.images-gallary img:hover {
+/* 3. Image scales inside its card box */
+.image-card img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain; /* Or 'cover' if you prefer filled cards */
+  object-position: center;
+}
+
+.image-gallery img:hover {
   transform: translateY(-4px); /* Interactive lift on hover */
 }
 
