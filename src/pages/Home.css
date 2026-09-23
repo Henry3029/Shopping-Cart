@@ -54,7 +54,7 @@
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: contain; /* Or 'cover' if you prefer filled cards */
+  object-fit: cover; /* Or 'cover' if you prefer filled cards */
   object-position: center;
 }
 
