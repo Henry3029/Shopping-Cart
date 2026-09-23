@@ -17,11 +17,17 @@ function Home({ onNavigateToShop }) {
         </button>
       </section>
       {/*images gallary section*/}
-      <div classeName="images-gallary">
-        <img src={bigviewImage} alt={"logo image"}/>
-        <img src={birthdayImage} alt={"birthday image"}/>
-        <img src={movieImage} alt={"the Next movie to watch"}/>
-      </div>
+      <div className="image-gallery">
+  <div className="image-card">
+    <img src={bigviewImage} alt="logo image" />
+  </div>
+  <div className="image-card">
+    <img src={birthdayImage} alt="birthday image" />
+  </div>
+  <div className="image-card">
+    <img src={movieImage} alt="the Next movie to watch" />
+  </div>
+</div>
 
       {/* Highlights / Features Section */}
       <section className="features-grid">
