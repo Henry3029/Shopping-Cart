@@ -53,6 +53,14 @@
   text-decoration: none;
 }
 
+/* src/components/Navbar.css */
+.navIcon {
+  width: 1.5rem; /* 24px (equivalent to w-6) */
+  height: 1.5rem; /* 24px (equivalent to h-6) */
+  color: #cbd5e1; /* slate-300 */
+}
+
+
 /* ==========================================
    TOGGLE BUTTON (HAMBURGER / CLOSE)
    ========================================== */

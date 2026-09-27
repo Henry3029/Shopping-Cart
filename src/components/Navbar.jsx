@@ -34,8 +34,8 @@ export default function Navbar({cartCount = 0}) {
 
       {/* Desktop Quick Cart Icon with Badge */}
       <NavLink to="/cart" className="cartBadgeLink">
-        <ShoppingCart className="w-6 h-6 text-slate-300" />
-        {totalCartCount > 0 && (
+        <ShoppingCart className="navIcon" />
+        {cartCount > 0 && (
           <span className="cartBadge">{totalCartCount}</span>
         )}
       </NavLink>
@@ -46,7 +46,7 @@ export default function Navbar({cartCount = 0}) {
         onClick={handleToggleMenu}
         aria-label="Toggle navigation menu"
       >
-        {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        {isMenuOpen ? <X className="navIcon" /> : <Menu className="navIcon" />}
         {cartCount > 0 && (
           <span className="cartBadge">{cartCount}</span>
         )}
