@@ -28,6 +28,12 @@ useEffect(() => {
   // Add or update item in cart
   const handleAddToCart = (product, quantity) => {
     if (quantity <= 0) return;
+    
+    // Ensure product exists and has an id key
+  if (!product || product.id === undefined) {
+    console.error("Invalid product passed to handleAddToCart:", product);
+    return;
+  }
 
     setCart((prevCart) => {
       const existingIndex = prevCart.findIndex((item) => item.id === product.id);

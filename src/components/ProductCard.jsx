@@ -24,7 +24,7 @@ export default function ProductCard({ product, onAddToCart }) {
       </div>
       <div className="product-info">
         <h3 className="product-title">{product.title}</h3>
-        <p className="product-price">${product.price.toFixed(2)}</p>
+        <p className="product-price">${Number(product.price || 0).toFixed(2)}</p>
         
         <div className="quantity-controls">
           <button onClick={handleDecrement} aria-label="Decrease quantity">-</button>
