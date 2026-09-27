@@ -1,4 +1,4 @@
-// src/components/Sidebar.jsx
+// src/components/Sidebar.jsx.tsx
 import { NavLink } from 'react-router-dom';
 import { Home, ShoppingBag, ShoppingCart } from 'lucide-react';
 import Sidebar from './Sidebar.css';
