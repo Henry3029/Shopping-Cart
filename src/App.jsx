@@ -1,14 +1,26 @@
 // src/App.jsx
 import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
+// Layout Components
+import HeaderComponent from './components/HeaderComponent';
+import FooterComponent from './components/FooterComponent';
 import Home from './pages/Home';
 import Shop from './pages/Shop';
 import Cart from './pages/Cart';
 import './App.css';
 
 export default function App() {
-  const [cart, setCart] = useState([]);
+  // Initialize state from LocalStorage
+const [cart, setCart] = useState(() => {
+  const savedCart = localStorage.getItem('app_cart');
+  return savedCart ? JSON.parse(savedCart) : [];
+});
+
+// Save to LocalStorage whenever cart updates
+useEffect(() => {
+  localStorage.setItem('app_cart', JSON.stringify(cart));
+}, [cart]);
+
 
   // Calculate total badge count for Navbar
   const totalCartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
@@ -49,7 +61,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <div className="app-container">
-        <Navbar cartCount={totalCartCount} />
+      <HeaderComponent cartCount={totalCartCount} />
         <main className="main-content">
           <Routes>
             <Route path="/" element={<Home />} />
@@ -69,6 +81,7 @@ export default function App() {
             />
           </Routes>
         </main>
+        <FooterComponent />
       </div>
     </BrowserRouter>
   );

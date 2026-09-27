@@ -1,0 +1,33 @@
+/* Container for the sticky header wrapper */
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem; /* Compact 12px vertical, 24px horizontal padding */
+  background-color: rgba(2, 6, 23, 0.85); /* Deep slate background matching Tailwind slate-950 */
+  backdrop-filter: blur(12px); /* Glassmorphism background blur effect */
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(51, 65, 85, 0.5); /* Subtle dark border (slate-800) */
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Inner wrapper ensuring the nav content scales smoothly across devices */
+.headerInner {
+  width: 100%;
+  max-width: 80rem; /* Equivalent to max-w-7xl (1280px) */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Mobile viewport spacing adjustment */
+@media (max-width: 640px) {
+  .header {
+    padding: 0.75rem 0.75rem; /* Tight 12px horizontal padding on small screens */
+  }
+}

@@ -1,0 +1,25 @@
+/* Main footer wrapper */
+.footer {
+  width: 100%;
+  background-color: #020617; /* Deep slate-950 */
+  border-top: 1px solid rgba(51, 65, 85, 0.6); /* Slate-800 border */
+  color: #94a3b8; /* Slate-400 text */
+  font-family: inherit;
+  padding: 3rem 1.5rem 1.5rem;
+}
+
+/* Inner layout container */
+.footerInner {
+  max-width: 80rem; /* max-w-7xl (1280px) */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+/* Mobile screen padding adjustment */
+@media (max-width: 640px) {
+  .footer {
+    padding: 2rem 0.75rem 1rem; /* Tight 12px horizontal padding on phones */
+  }
+}
