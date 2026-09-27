@@ -1,7 +1,7 @@
 // src/components/Navbar.jsx
 import { useState, useEffect } from 'react'
-import { NavLink } from 'react-router-dom';;
-import { Menu, X } from 'lucide-react';
+import { NavLink } from 'react-router-dom';
+import { Menu, X, ShoppingCart} from 'lucide-react';
 import Sidebar from './Sidebar';
 import './Navbar.css';
 
