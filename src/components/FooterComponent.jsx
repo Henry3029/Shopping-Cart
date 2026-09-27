@@ -1,20 +1,15 @@
 import React from 'react';
-import Image from 'next/image';
 import './FooterComponent.css';
 
 export default function FooterComponent() {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className="w-full bg-slate-950 border-t border-slate-800 text-slate-400 text-xs mt-auto">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row items-center">
-      <Image
-            src="/logo.svg" 
-            alt="Trading Control Center Logo"
-            width={32}
-            height={32}
-            className="w-8 h-8 object-contain"
-            priority 
-          />
-        
+    <footer className="footer">
+      <div className="footerInner">
+        <p className="footerText">
+          &copy; {currentYear} BigView. All rights reserved.
+        </p>
       </div>
     </footer>
   );
